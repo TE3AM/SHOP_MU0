@@ -1,0 +1,219 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+
+li{list-style: none;}
+a{text-decoration: none;}
+img{border:none;}
+table{border-spacing: 0; width:100%}
+fieldset{border:none;}
+figcaption{position: absolute; left: -99999px;}
+legend{position: absolute; left: -99999px;}
+address{font-style: normal;}
+input[type=button],input[type=submit],input[type=ressrt],input[type=image],button{ cursor:pointer; }
+label.away{ position: absolute; left: -99999px; }
+.clear_fix:after{content: "";display: block;clear: both;}
+
+/* 페이지 */
+#subPage{
+	width:1280px;
+	margin:0 auto;
+	background:#f7f5e6; /* 삭제 */
+}
+
+
+section .subM{ 
+    width: 1280px; 
+    height:150px; 
+    position: relative;
+	margin: 0 auto; 
+    z-index: 10000;
+}
+.subM h3{ 
+	position: absolute; 
+	bottom: 30px;
+	text-align: left;
+	width: 100%; 
+	font-size:24px;
+	font-weight:500;
+	padding: 10px 0; 
+    border-bottom: 2px solid #ff712b;
+}
+
+
+/* 수정-삭제-답변 */
+.admin_toll{
+	height: 35px;
+	line-height: 35px;
+	margin-top: 50px;
+	text-align: right;
+}
+
+.admin_toll ul{
+	display:inline-block;
+}
+
+.admin_toll li{
+	float: left;
+	margin-right: 10px;
+}
+.admin_toll li a, .admin_toll li input{
+	display: inline-block;
+	padding: 0 10px;
+	line-height: 35px;
+	text-align: center;
+	border-radius: 5px;
+	background: #000;
+	font-size:15px;
+	color: #fff;
+	border:none;
+}
+.admin_toll li a:hover, .admin_toll li input:hover{
+	box-shadow: 2px 2px 0 #ff712b;
+}
+
+
+/* 페이지 */
+.page{
+	text-align: center;
+	margin-top: 50px;
+}
+.page a{
+	margin: 0 5px;
+	font-size: 15px;
+}
+.page .num{
+	display: inline-block;
+	margin: 0 10px;
+}
+.page .num a{
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+}
+.page .num a.click{
+	background: #ff9264;
+	border-radius: 50px;
+	font-weight: 500;
+	font-size: 18px;
+}
+
+
+
+
+
+
+/* order */
+.order_type li{
+	float: left;
+	width: 100px; 
+	height: 35px; 
+    line-height: 31px;
+    background: #cccccc;
+    border-radius: 20px;
+    text-align: center;
+    margin-right: 20px;
+    position: relative;
+    border:2px solid #ccc;
+    font-size: 15px;
+    font-weight: 500;
+   }
+.order_type li.on{
+	background: #ff712b;
+	border-color: #000;
+}
+
+
+.order_type{margin-bottom: 50px;}
+
+#order_item{
+	text-align: center;
+	margin-bottom: 50px
+}
+#order_item td{padding: 10px 0;}
+
+.order_info{
+	padding-bottom: 10px;
+	font-size: 14px;
+}
+.order_info .space{
+	display: inline-block;
+	width: 30px;
+}
+
+
+#order_item td{font-size: 14px;}
+#order_item th, #order_item td{
+	border:1px solid #c1c1c1;
+	border-right: 0;
+}
+#order_item td:nth-of-type(3){border-left: 0;}
+#order_item th:last-of-type, #order_item td:last-of-type{border-right: 1px solid #c1c1c1;} 
+#order_item td > span.shop_1depth{
+	display: block;
+	font-weight: 500;
+	color: #888
+}
+#order_item .order_item_tit th{
+	font-size: 14px;
+	background: #f3f3f3;
+	border-bottom: 0;
+}
+
+
+.profile table{
+	width: 615px;
+	float: left;
+	text-align: left;
+	border:1px solid #c1c1c1;
+}
+.profile table caption{
+	font-size: 15px;
+	text-align: left;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+.profile table th, .profile table td{
+	font-size: 14px;
+	height: 45px;
+}
+.profile table th{
+	width:180px;
+	border-right:1px solid #c1c1c1;
+	border-bottom:1px solid #c1c1c1;
+	text-align: center;
+	background: #f3f3f3
+}
+.profile table tr:last-of-type th, .profile table tr:last-of-type td{border-bottom: 0;}
+.profile table td{
+	border-bottom: 1px solid #c1c1c1;
+	padding: 0 10px;
+}
+#p_left{
+	margin-right: 50px;
+	margin-bottom: 50px;
+}
+
+
+#delivery{
+	width:100%;
+	margin-bottom: 50px;
+}
+#delivery .d_right{
+	width:800px;
+	border-left: 1px solid #c1c1c1;
+	 border-right: 0;
+}
+#delivery input[type="text"]{
+	width:100%;
+	height: 35px;
+	border:0;
+	padding-left: 10px;
+	border:1px solid #dedede
+}
+
+#order_status{width: 100%;}
+#order_status tr td label.sts{
+	font-size: 14px;
+	margin: 0 15px 0 5px;
+}
