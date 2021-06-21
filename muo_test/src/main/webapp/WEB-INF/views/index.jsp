@@ -50,7 +50,7 @@
         <div class="bg02"><img src="/resources/img/bg02.jpg" alt=""></div>
     </div>
     
-    
+    <!-- test -->
 </section>
 
 <%@include file="common/footer.jsp" %>
