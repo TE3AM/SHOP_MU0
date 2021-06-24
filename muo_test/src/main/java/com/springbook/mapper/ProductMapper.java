@@ -13,13 +13,15 @@ public interface ProductMapper {
 	
 	public void register(ProductVO vo);
 	
-	public ProductVO getProduct(int it_number);
+	public ProductVO getProduct(Long it_number);
 	
-	public int modify(int it_number);
+	public int modify(ProductVO vo);
 	
-	public int remove(int it_number);
+	public int listModify(ProductVO vo);
+	
+	public int remove(Long it_number);
 	
 	public int getTotalCount(Criteria cri);
 	
-	public void insertProductKey(ProductVO vo);
+	/* public void insertProductKey(ProductVO vo); */
 }
