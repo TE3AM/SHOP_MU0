@@ -13,7 +13,7 @@ public class PageDTO {
  private int total;
  private Criteria cri;
  
-public PageDTO(Criteria cri, int total) {
+ public PageDTO(Criteria cri, int total) {
 	this.cri = cri;
 	this.total = total;
 	
