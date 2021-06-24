@@ -9,11 +9,13 @@ public interface ProductService {
 	
 	public void register(ProductVO vo);
 	
-	public ProductVO getProduct(int it_number);
+	public ProductVO getProduct(Long it_number);
 	
 	public boolean modify(ProductVO vo);
 	
-	public boolean remove(int it_number);
+	public boolean listModify(ProductVO vo);
+	
+	public boolean remove(Long it_number);
 	
 	public List<ProductVO> getList();
 	
