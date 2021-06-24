@@ -10,17 +10,19 @@
 		    <table class="qna_view_member">
 		        <tr class="qna_tit">
 		            <th>
-		                Q.&nbsp;&nbsp;배송 - 배송 언제 출발하나요?
+		                Q.&nbsp;&nbsp;${qna.qna_type } - ${qna.qna_title }
 		                <span class="qna_tit_info">
-		                    hong1234&nbsp;|&nbsp;2020.02.25
+		                    {member.id }&nbsp;|&nbsp;${qna.qna_regdate }
 		                </span>
 		            </th>
 		        </tr>
 		        <tr class="qna_cont">
 		            <td>
-		                <div class="file"><span>첨부파일</span>2020.02.02.jpg</div>
+		                <div class="file"><span><input type="file" name="uploadFile"></span></div>
+		        
 		                <div name="qna_view_content">
-		                    오늘 주문했는데, 배송 언제 출발하나요?
+		                <img src="${qna.qna_img }">
+		                    ${qna.qna_content }
 		                </div>
 		            </td>
 		        </tr>
@@ -44,9 +46,12 @@
 		    </table>
 		    <div class="admin_toll">
 			    <ul class="clear_fix">
-			    	<li><a href="qna.do">목록</a></li>
-			        <li><a href="qna_write.do">수정</a></li>
-			        <li><a href="#a2">삭제</a></li>
+			    	<li><a href="/qna/list">목록</a></li>
+			    	<li><form action="/qna/modify" method="get">
+			    	<input type="hidden" name="qna_bno" value="${qna.qna_bno }">
+			        <input type="submit" value="수정">
+			        </form></li>
+			        <li><a href="/qna/remove?qna_bno=${qna.qna_bno }">삭제</a></li>
 			        <li><a href="#reply">답변</a></li>
 			    </ul>
 		    </div>
