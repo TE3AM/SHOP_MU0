@@ -8,7 +8,7 @@
 			<h3>PRODUCT</h3>
 		</div>
 		<div class="ad_product_write">
-			<form action="/admin/product/register" method="post">
+			<form action="/admin/product/write" method="post" enctype="multipart/form-data">
 				<ul>
 					<li><label for="id" class="p_title"
 						style="margin-bottom: 20px;">기본분류</label>
@@ -52,12 +52,12 @@
 						placeholder="내용을 입력해주세요"> <br></li>
 
 					<li><label for="sale" class="p_title">세일상품</label> <label><input
-							type="radio" name="it_sale" value="on" checked>활성화 &nbsp;</label>
-						<label><input type="radio" name="p_sale" value="off">비활성
+							type="radio" name="it_sale" value="1" checked>활성화 &nbsp;</label>
+						<label><input type="radio" name="it_sale" value="0">비활성
 							<br></label></li>
 
 					<li><label for="sold_out" class="p_title">재고수량</label> <input
-						type="text" id="p_stock_quantity" name="remainCount" class="content"
+						type="text" id="p_stock_quantity" name="it_remainCount" class="content"
 						placeholder="내용을 입력해주세요"> <br></li>
 
 
@@ -76,16 +76,18 @@
 					<li><label for="option_content2" class="p_title">옵션상품2
 							항목</label> <input type="text" id="p_option_content2" name="it_option4" class="content"
 						placeholder="내용을 입력해주세요"> <br></li>
+						
+					<li><input type="hidden" name="it_saleCount" value="0"></li>
 
 
 					<li><label for="attached_file1" class="p_title">첨부파일1</label>
-						<input type="file" name="it_img1"> <br></li>
+						<input type="file" name="uploadFile1"> <br></li>
 
 					<li><label for="attached_file2" class="p_title">첨부파일2</label>
-						<input type="file" name="it_img2"><br></li>
+						<input type="file" name="uploadFile2"><br></li>
 
 					<li><label for="attached_file2" class="p_title">첨부파일3</label>
-						<input type="file" name="it_img3"> <br></li>
+						<input type="file" name="uploadFile3"> <br></li>
 
 
 
