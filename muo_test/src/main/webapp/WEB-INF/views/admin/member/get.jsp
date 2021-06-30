@@ -65,10 +65,9 @@ font-size:13pt;
 <body>
 <%-- 	<jsp:include page="includes/header.html"></jsp:include> --%>
 	
-	<section class="subPage">
-		<h2 class="sub_tit">
-			관리자 페이지<span class="sub_tit_ko">회원조회</span>
-		</h2>
+	<section >
+	<div id="subPage">
+		<div class="subM"><h3>회원조회</h3></div>
 		
 
 		
@@ -144,6 +143,7 @@ font-size:13pt;
 			<input type="hidden" name="keyword" value='<c:out value="${cri.keyword }" />'>
 		
 		</form>
+		</div>
 	</section>
 	
 <%-- 	<jsp:include page="includes/footer.html"></jsp:include> --%>

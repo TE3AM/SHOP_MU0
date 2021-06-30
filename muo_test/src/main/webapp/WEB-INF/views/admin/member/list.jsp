@@ -2,65 +2,30 @@
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
+
 <%@include file="/WEB-INF/views/common/header.jsp" %>
-<html>
-<head>
-<meta charset="UTF-8">
+
 <title>회원관리 LIST</title>
-<!-- <link rel="stylesheet" href="./css/subpage.css"> -->
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <style>
-
-/* MemberManageList */
-.searchdiv{
-	text-align: right;
-	padding-bottom: 30px;
-	padding-right:120px;
-	
-}
-.searchdiv input{
-	font-size: 17px;
-}
-
-#memberManageTable {
-	text-align: center;
-	border-collapse: collapse;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-#memberManageTable th {
-	background-color: #000;
-	color: #fff;
-	height: 70px;
-	width: 10%
-}
-
-#memberManageTable td {
-	height: 40px;
-}
-
-#updateBtn {
-	color: #fff;
-	font-weight: bold; background-color : #ff712b;
-	border-color: #ff712b;
-	border-radius: 8px;
-	font-size: 11pt;
-	padding: 1px 2px 1px 2px;
-	background-color: #ff712b;
-}
+.pagination{
+margin-top:35px;
+margin-bottom:40px;
+text-align:center;}
+.pagination li{
+align:center;
+list-stype-type: none;
+display: inline;
+outline: 1px dotted #ff712b;}
 </style>
-</head>
-<body>
-<%-- 	<jsp:include page="includes/header.html"></jsp:include> --%>
 
-	<section class="subPage">
-		<h2 class="sub_tit">
-			회원관리<span class="sub_tit_ko">회원관리</span>
-		</h2>
+
+<section>
+	
+ 	<div id="subPage">
+		<div class="subM"><h3>MEMBER</h3></div>
+		<div class="ad_member_list">
 		
 		<div class="searchdiv">
 			<form method="get" action="/admin/member/list" id="searchForm">
@@ -141,8 +106,8 @@
   		      </ul>
 		
 		</div>
-		
-		
+		</div>
+		</div>
 		<form id="actionForm" action="/admin/member/list" method="get">
 			<input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum }">
 			<input type="hidden" name="amount" value="${pageMaker.cri.amount }">
@@ -208,7 +173,5 @@ $(document).ready(function(){
 	
 });
 </script>	
-			
-</body>
-</html>
+
 <%@include file="/WEB-INF/views/common/footer.jsp" %>
