@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@include file="/WEB-INF/views/common/header.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -52,11 +53,12 @@
 </head>
 <body>
 <%--  	<jsp:include page="includes/header.html"></jsp:include>  --%>
-
-	<section class="subPage">
-		<h2 class="sub_tit">
-			비밀번호 찾기<span class="sub_tit_ko">비밀번호 찾기</span>
-		</h2>
+<section>
+	<div class="sub_slider"></div>
+	<div id="subPage">
+		<div class="subM">
+			<h3>비밀번호 찾기</h3>
+		</div>
 		<form id="findPWForm" name="findPWInfo" action="/member/findPW2" method="get">
 		
 		<div class="inputarea">
@@ -102,6 +104,7 @@
 			<button type="submit" id="findPWBtn" >비밀번호 찾기</button>
 		</div>
 		</form>
+		</div>
 	</section>
 
 <%-- 	<jsp:include page="includes/footer.html"></jsp:include> --%>
@@ -329,3 +332,4 @@ function init() {
 
 </body>
 </html>
+<%@include file="/WEB-INF/views/common/footer.jsp" %>
