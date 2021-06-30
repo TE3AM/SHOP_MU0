@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.springbook.domain.Criteria;
 import com.springbook.domain.MemberVO;
+import com.springbook.domain.findPWDTO;
 import com.springbook.mapper.MemberMapper;
 
 import lombok.Setter;
@@ -19,8 +20,8 @@ public class MemberServiceImpl implements MemberService {
 	private MemberMapper mapper;
 	
 	@Override
-	public void register(MemberVO board) {
-		mapper.register(board);
+	public void register(MemberVO member) {
+		mapper.register(member);
 	}
 
 	@Override
@@ -29,13 +30,13 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 	@Override
-	public boolean modify(MemberVO member) {
-		return mapper.update(member)==1;
+	public int modify(MemberVO member) {
+		return mapper.update(member);
 	}
 
 	@Override
-	public boolean remove(int mb_seq) {
-		return mapper.delete(mb_seq)==1;
+	public int remove(int mb_seq) {
+		return mapper.delete(mb_seq);
 	}
 
 	@Override
@@ -54,8 +55,28 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 	@Override
-	public String findPW(MemberVO member) {
-		return mapper.findPW(member);
+	public String findPW(findPWDTO type) {
+		return mapper.findPW(type);
+	}
+
+	@Override
+	public int checkIdValidation(String mb_id) {
+		return mapper.checkIdValidation(mb_id);
+	}
+
+	@Override
+	public int checkPhoneValidation(String mb_phone) {
+		return mapper.checkPhoneValidation(mb_phone);
+	}
+
+	@Override
+	public int updateByUser(MemberVO member) {
+		return mapper.updateByUser(member);
+	}
+
+	@Override
+	public MemberVO getUpdateInfo(String mb_id) {
+		return mapper.getUpdateInfo(mb_id);
 	}
 
 	
